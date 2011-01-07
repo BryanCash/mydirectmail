@@ -1,0 +1,906 @@
+<style type="text/css">
+  td {
+    font-family : verdana;
+    font-size : 8px;
+  }
+  th {
+    font-family : Times;
+    font-size : 9px;
+    font-weight : bold;
+  }
+</style>
+
+<table width="100%" cellspacing = "0" cellpadding="0">
+   <tr>
+    <th> --2010:(Version 1.34.)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Added extract zipcode from address.</li>
+      </ul>
+    </td>
+  </tr>
+   <tr>
+    <th> 20-09-2010:(Version 1.34.14)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Changed Headers from "Field {number}" to just "{number}".</li>
+        <li>Added windows shell integration in options.</li>
+        <li>Fixed shift fields to include country and customer code fields.</li>
+        <li>Added customer code field.</li>
+      </ul>
+    </td>
+  </tr>
+   <tr>
+    <th> 07-09-2010:(Version 1.34.07)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>When shifting fields, start-end fields are preselected if possible.</li>
+        <li>Fixed bug with padding a zero length field.</li>
+        <li>Merge files by dropping them in DirectMail.</li>
+      </ul>
+    </td>
+  </tr>
+   <tr>
+    <th> 14-07-2010:(Version 1.34.07)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Removed splash screen</li>
+        <li>Drag and drop excel files</li>
+        <li>Fixed bug in List13 when tk is not well formated</li>
+        <li>Added afm column in erp mysql table</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 21-05-2010:(Version 1.34.01)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Add registered letter elta codes from file or by defining 'from' and 'to' numbers</li>
+        <li>Find gender ignores texts in parenthesis and quotes</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 26-04-2010:(Version 1.33.96)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed Addressings</li>
+        <li>Change addressing's form default values</li>
+      </ul>
+    </td>
+  </tr>
+   <tr>
+    <th> 13-04-2010:(Version 1.33.93)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed creation of default ini</li>
+        <li>Fixed splitting fullname</li>
+        <li>When correcting address/city you can edit the address field</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 29-03-2010:(Version 1.33.84)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Addded multipla page printing</li>
+        <li>Added updater</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 23-03-2010:(Version 1.33.80)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Added strictness when finding gender.Also fixed some get gender bugs</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 22-03-2010:(Version 1.33.78)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>When shifting fields a field is added to point the end of the pcadd data</li>
+        <li>Adding elta & pcadd fields without sort the file</li>
+        <li>Adding counter defaults to XXXXXX11</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 03-03-2010:(Version 1.33.72)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Find TK with 3 possible ways (All records, those not in ELTA DB and those not 5digit numbers in range 10000-85900)</li>
+        <li>Added DB export in existing database</li>
+        <li>Added trim file fields</li>
+        <li>Fix excel import (new lines in fields are replaced with blanks)</li>
+        <li>Added format field as decimal</li>
+
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 10-02-2010:(Version 1.33.50)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Easier selecting sort order in multi sorting</li>
+        <li>Added not equals and not includes filters</li>
+        <li>Using field names instead of field_0 etc when making a file fixed length</li>
+        <li>Added numeric filter</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 28-01-2010:(Version 1.33.08)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Multisorting fields</li>
+        <li>Replace value from DB</li>
+        <li>No message when cancelling a save</li>
+        <li>Export to db suggests the available databases in host</li>
+        <li>Search in erp companies</li>
+        <li>quick option dont bother</li>
+        <li>Fixed companies addressing</li>
+        <li>Fixed block error in correct city addresses</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 21-01-2010:(Version 1.32.95)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Added cancel button in elta sorting</li>
+        <li>Fixed encoding in import excel</li>
+        <li>Delete line feeds inside imported excel cells</li>
+        <li>Fixed update and split names</li>
+        <li>May fixed the save file freezing</li>
+        <li>Show output progress as quick option</li>
+        <li>Shows time that has passed in each action</li>
+        <li>Fixed the last file of the double spliting action</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 05-01-2010:(Version 1.32.84)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed bug with File field and length checking taking a huge amount of memory and time</li>
+        <li>Fixed bug with trim fields</li>
+        <li>Create iovi names.txt with multiple backgrounds (in filed pop up menu -> unique)</li>
+        <li>Fixed bug when importing excel with date cells</li>
+        <li>Added split by field in split file</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 30-12-2009:(Version 1.32.78)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed bug with moving columns while a filter is enabled</li>
+        <li>Fixed remaining lines in multiple printing</li>
+        <li>Fixed double production when number of lines / 2 is odd</li>
+        <li>RemoveFilters button in toolbar</li>
+        <li>Fixed import from database</li>
+        <li>Fixed some filter related bugs</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 15-12-2009:(Version 1.32.69)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Filter columns</li>
+        <li>Save Filtered results</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 30-11-2009:(Version 1.32.63)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Recreated all addressings from scratch. Now addressing needs surname,
+          firstname and gender fields. A panel is displayed where you can enter 
+          the addressing texts, choose if firstname, surname or both addressing,
+          if addressing should be added to unknown gender, if addressing should 
+          be capitilized, if accent is used and if a comma is added in the end 
+          of the addressing.</li>
+        <li>Correct firstnames now uses all available names in field and adds 
+          corrected names in name_substitute table.</li>
+        <li>Correct cities corrects only blank fields.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 27-11-2009:(Version 1.32.59)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>When splitting fullname company related words are inserted in companies table.</li>
+        <li>Changed Genitive addressing to use all surnames, names.Now needs splited firstname/surname.</li>
+        <li>New get the gender.Now needs splited firstname/surname.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 04-11-2009:(Version 1.32.55)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Add Merge Files (Tools-File Tools) to merge multiple files with the
+          same number of fields to one file.</li>
+        <li>When moving on sample JTable the current row / column are displayed</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 23-10-2009:(Version 1.32.52)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Correct cities bug fixes</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 23-10-2009:(Version 1.32.49)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Correct addres, cities exports file with detailed information of
+          corrected cities/addresses and the amount of each city/address in
+          ascending order</li>
+        <li>Select cities shows the line id too</li>
+        <li>Correct address cities export the report to "searchReport.txt"
+          and findTk appends it's report to the same file</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 19-10-2009:(Version 1.32.46)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Creating sample file</li>
+        <li>Test envelope exports the ids to a file</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 14-10-2009:(Version 1.32.42)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed Correcting cities</li>
+        <li>Move delete column button</li>
+        <li>Added delimeter ~</li>
+        <li>Option to sort ERP companies by id or name</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 02-10-2009:(Version 1.32.36)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed Correct cities</li>
+        <li>Fixed delete duplicates</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 22-09-2009:(Version 1.32.32)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Order and customer codes are 6digit numbers instead of 4.</li>
+        <li>When correcting cities the default input language is Greek</li>
+        <li>Option to correct a city without adding it in the database</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 16-09-2009:(Version 1.32.28)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>If there's no connection to erp uses mysql</li>
+        <li>Update customers from erp to mysql</li>
+        <li>Add order code field in pcadd</li>
+        <li>Get customer names from compak database</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 14-09-2009:(Version 1.31.99)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>When sorting you are asked for the customer ID</li>
+        <li>Get gender uses company table</li>
+        <li>Tmp tables are created in directmail_tmp database</li>
+        <li>Add fields cust_id, flags</li>
+        <li>Report field and eol field created on elta sorting</li>
+        <li>Shift fields create 8 standard fields</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 09-09-2009:(Version 1.31.84)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Correct City closes MySQL connections</li>
+        <li>Added option to delete multiple fields at once</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 07-09-2009:(Version 1.31.78)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Added old num of tk sorting for 23x32 envelopes</li>
+        <li>Get unique values of a field.Also there's an option for exporting
+          unique values for IOVI</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 26-08-2009:(Version 1.31.62)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Correct Cities uses and the correctWord class too</li>
+        <li>Vocative Addresing is applied up to 3 surnames.Surname and first name should be in different columns</li>
+        <li>Added sort by field desc or asc order</li>
+        <li>Added Split Fullname to firstname/surname</li>
+        <li>Added Find County by TK</li>
+        <li>Getting the 5 envelopes with the most filled fields</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 29-07-2009:(Version 1.31.52)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Correct Firstnames</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 28-07-2009:(Version 1.31.48)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Find holidays</li>
+        <li>Firstname addressing and find gender use the new firstnames table</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 21-07-2009:(Version 1.31.47)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Added spliting/double production</li>
+        <li>Fixed SQL error in list 13 checking</li>
+        <li>Added companies in find gender</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 07-07-2009:(Version 1.31.41)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Show changes if new version is found</li>
+        <li>Export to Db allows user to select a different DB, table name and
+          use column names from the first line of the file</li>
+        <li>Set sample table font size as quick option</li>
+        <li>Drop down to select addressing in options</li>
+        <li>Option to check tk against elta db or not in check Address</li>
+        <li>Keep the first word of a field (usually first surname)</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 16-06-2009:(Version 1.31.35)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Export - List 13 exports the list 13 file into the dafermos database</li>
+        <li>Sample lines can now show a range instead of the first n lines</li>
+        <li>Stop reporting if there are too many errors in file saving</li>
+        <li>Add a "Fill a field from another one if it's empty" ability</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 04-06-2009:(Version 1.31.27)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>When checking duplicates you have the option to not delete them.
+          Also TK field is not checked by default</li>
+        <li>Fixed getGender to work better even if Fullname 0r first and second name are used</li>
+        <li>Fixed spaces in codeline</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 01-06-2009:(Version 1.31.25)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Added option to change the LAF of the application</li>
+        <li>Pad field allows to reduce number of characters</li>
+        <li>Changed sample table font to monospaced</li>
+        <li>Fixed bug with pad field</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 13-05-2009:(Version 1.31.20)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Changed check address report</li>
+        <li>Added updated version tab</li>
+        <li>Add indetermined mode to progress bar in delete duplicates</li>
+        <li>Option to delete customers with empty/wrong fields</li>
+        <li>Check Address creates report with the empty/wrong fields</li>
+        <li>Added uncaught exceptions tab</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>06-05-2009:(Version 1.31.07)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Change Check Addresses to check the TK with the new Elta DB</li>
+        <li>Export file to mySQL</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>28-04-2009:(Version 1.31.05)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Added set field length quick option</li>
+        <li>Convert to greek the whole file</li>
+        <li>Load file with no del in one column</li>
+        <li>Added tool to delete records from a list</li>
+        <li>Fixed bug when spaces are in the ini file path</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>  31-03-2009:(Version 1.30.92)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Added choose database host quick option</li>
+        <li>Added quick option for check on saving</li>
+        <li>Added quick option to change the number of lines shown in the sample</li>
+        <li>Added quick options panel</li>
+        <li>Fixed bug with unmark fields</li>
+        <li>Changed find zipcodes to use the new elta database</li>
+        <li>Adding glasspane to prevent clicks while thread is working</li>
+        <li>Added correct address/city</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>  10-03-2009:(Version 1.30.85)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed Csv opening</li>
+        <li>Fixed find city</li>
+        <li>Fixed bug with accussative addressing</li>
+        <li>Fixed bug with delete duplicates using a null sql statement</li>
+        <li>May Fixed bug when sample dissapeared after an action</li>
+        <li>Fixed bug with "Shift Fields"</li>
+        <li>Added "Merge reports"</li>
+        <li>Fixed bug with opening reprint file whan an excel file has been imported</li>
+        <li>Updated POI library to 3.2</li>
+        <li>Added a "X" in the column header for easy deletion of fields</li>
+        <li>Fixed bug when opening a file without a known delimeter</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>  06-03-2009:(Version 1.30.76)</th>
+  <tr>
+    <td><ul>
+        <li>Added option for creating addressing without accent</li>
+        <li>Fixed bug with ¿ , ‡ when capitilizing</li>
+        <li>Rearranged options panel</li>
+        <li>Added option to check number of fields and/or line lengths on file saving</li>
+        <li>Fixed bug with opening last opened file</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>  04-03-2009:(Version 1.30.74)</th>
+  <tr>
+    <td>
+      <ul>
+        <li>Options are saved in alphabetical order</li>
+        <li>Also import the last imported excell</li>
+        <li>Added "Create Codeline"</li>
+        <li>Add option to load the last opened file on startup</li>
+        <li>Fixed bug with canceling when padding a field</li>
+        <li>GUI remembers split pane divider location</li>
+        <li>Fixed bug with "shift fields" when choosing up to the last field</li>
+        <li>Change Combine fields panel to a user friendly one</li>
+        <li>Fixed bug with old ini file format</li>
+        <li>Added "Duplicate Column"</li>
+        <li>Fixed bug Pad field and limit padding string to one character</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>  25-02-2009:(Version 1.30.66 )</th>
+  <tr>
+    <td><ul>
+        <li>Make fixed size pop up menu renamed to Pad Field and lets you select the
+          length, padding string and the padding direction.</li>
+        <li>Added Trim field pop up menu</li>
+        <li>Added Column editing Menu in table's PopUp Menu with:
+          <ol>
+            <li>Delete Column</li>
+            <li>Add Column Before</li>
+            <li>Add Column After</li>
+          </ol>
+        </li>
+        <li>Menu item (Help - Log) for displaying the log file in the browser</li>
+        <li>Break long field breaks the field to number of pieces depending on the longest string
+          and not to 2 fields</li>
+        <li>Removed @ before TK</li>
+        <li>Add an horizontal scrollbar on sample table if fields are greater then 10
+          or toggle scrollbar by double clicking on the header</li>
+        <li>Log File in HTML format</li>
+        <li>Select the font of the application</li>
+        <li>Capitilizing one field</li>
+        <li>Capitilizing all data</li>
+        <li>Fixed find gender (names with sex = 0 in DB are not retrieved)</li>
+        <li>Fixed bug with delimeter change</li>
+        <li>Fixed bug with ¢ turns to `</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 15 - 01 -2009:(Version 1.29)</th>
+  <tr>
+    <td><ul>
+        <li>Set imp.txt file to be saved in the tmp dir</li>
+        <li>Changed logging system to the JVM one</li>
+        <li>Fixed bug with excel importing </li>
+        <li>Fixed FindTK so it uses the country field</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 11 - 12 -2008:(Version 1.28)</th>
+  <tr>
+    <td><ul>
+        <li>Added vocative addressing to first names</li>
+        <li>Fixed color on east border</li>
+        <li>Make option for default input directory</li>
+        <li>Fixed encoding when importing from excell</li>
+        <li>Add application icon</li>
+        <li>Use include.jar instead of Connections internal package</li>
+        <li>Logging actions/errors in log file</li>
+        <li>Deleted connections package</li>
+        <li>Genitive and accusative addressing use the unknown/male/female addressings from the options</li>
+        <li>Fixed addressing to use fullname or firstname/lastname</li>
+        <li>Added csv files to "open file"</li>
+        <li>Fixed issues with utf encoding</li>
+        <li>Fixed delete duplicates not refreshing sample table</li>
+        <li>Fixed bugs in elta flag sorting which deal with the database table's encoding</li>
+        <li>When opening file it's converted to default system encoding</li>
+        <li>When excluding names from list 13 you can select if the address and/or Zipcode should match</li>
+        <li>Add exclude from List 13</li>
+        <li>Checks/Asks for file encoding on opening file</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th> 05 - 11 -2008:(Version 1.27)</th>
+  <tr>
+    <td><ul>
+        <li>Not show "File is saved message"</li>
+        <li>"Mark as" Menu on top</li>
+        <li>On file load delete " generated by excel export</li>
+        <li>Fixed bug when making a file fixed length an previously you have deleted a field and the last field of a line is empty</li>
+        <li>Add option in delete duplicates so if the surname is marked the program searches for male/female duplicates</li>
+        <li>Find the city by the ZipCode</li>
+        <li>Uses only one database "directmail"</li>
+        <li>Add option in Search & Replace to use Reg.Exp. or not</li>
+        <li>Fixed bug when closing the current file some variables were not initialized</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr>
+    <th> 23 - 10 -2008:(Version 1.26)</th>
+  <tr>
+    <td><ul>
+        <li>Converts field's characters from English to Greek </li>
+        <li>Search for TK in the zipcodes.oldsearches table too </li>
+        <li>Gender field may contain
+          <ol>
+            <li>For Male : "¡Õƒ—¡”, ¡Õ«—, ¡Õ‘—¡”, ÃALE , M,  œ” , KOS"</li>
+            <li>For Female : "√’Õ¡… ¡, »’À«, √’Õ«, FEMALE , F, KA,  ¡"</li>
+          </ol>
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr>
+    <th> 23-09-2008:(Version 1.25)</th>
+  <tr>
+    <td><ul>
+        <li>Changed Make Douplex Printing so it can be used with auto print</li>
+        <li>Capitalized Addressing</li>
+        <li>Added Country field for ELTA sorting</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr>
+    <th> 29-08-2008:(Version 1.24)</th>
+  <tr>
+    <td><ul>
+        <li>New Elta Sorting</li>
+        <li>Open file by dragging it on the sample table</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr>
+    <th> 29-07-2008:(Version 1.23)</th>
+  <tr>
+    <td>Shifting label fields</td>
+  </tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr>
+    <th> 25-07-2008:(Version 1.22)</th>
+  <tr>
+    <td>Sorting by Areas and then By NumOfTk,Tk</td>
+  </tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr>
+    <th> 26-06-2008:(Version 1.21)</th>
+  <tr>
+    <td>Not importing blank lines</td>
+  </tr>
+  <tr>
+    <td>Change TK format to XXXXX instead of XXX XX</td>
+  </tr>
+  <tr>
+    <td>Added mod10 check digit of a column</td>
+  </tr>
+  <tr>
+    <td>Added field "Search & Replace"</td>
+  </tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr>
+    <th> 26-02-2008:(Version 1.2)</th>
+  </tr>
+  <tr>
+    <td>Fixed bug when combining TK, city</td>
+  </tr>
+</table>	 
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr>
+    <th> 26-02-2008:(Version 1.2beta )</th>
+  </tr>
+  <tr>
+    <td>When opening a file , the number of fields of each line are checked. Errors are exported on "importErrors.txt"</td>
+  </tr>
+  <tr>
+    <td>Left clicking on a table header a tooltip is displayed about the maximum length of the current field</td>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>Change the order of the columns by dragging the headers</li>
+        <li>Close File initializes the application (needs testing)</li>
+        <li>Sort File by field</li>
+        <li>Added Tray Icon
+          <ol>
+            <li>Maximize Program</li>
+            <li>Minimize Program</li>
+            <li>Exit Program</li>
+            <li>Display info after time consuming actions</li>
+          </ol>
+        </li>
+        <li>Application minimizes to tray</li>
+        <li>NumOfTK Sorts first the wrong TK if CheckTK Command has run first</li>
+        <li>Show memory indicators</li>
+        <li>Convert money amounts to text</li>
+        <li>Delete duplicates</li>
+        <li>Import from Excel File</li>
+        <li>Import from Database</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr><th> 08-01-2008:(Version 1.1 )</th></tr>
+  <tr><td>
+      <ul>
+        <li>PDF Creator:</li>
+        <li>
+          <ol>
+            <li>Choose color of text</li>
+            <li>Automatically enlarging of Box to fit text</li>
+            <li>Static text can be formatted to Bold, Italic, Bolditalic and normal</li>
+          </ol>
+        </li>
+      </ul>
+      <ul>
+        <li>When adding counter you can select the production line (Bull, Xerox-CMC1, Xerox-CMC2) so "11","", or "1" is added after the counter.</li>
+        <li>Draw cutting lines on ELTA PDF</li>
+        <li>Add priority marking on ELTA PDF</li>
+        <li>Users:</li>
+        <li>
+          <ol>
+            <li>User must login to start using the application</li>
+            <li>Adding users</li>
+            <li>Editing users</li>
+          </ol>
+        </li>
+      </ul>
+    </td></tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr><th> 02-01-2008:(Version 1)</th></tr>
+  <tr><td>PDF creation tool:
+      <ul>
+        <li>Creating of text elements</li>
+        <li>
+          <ol>
+            <li>Text elements can be variable or static</li>
+            <li>Printing only part of the variable text</li>
+            <li>Printing a string before / after the variable text</li>
+            <li>Can choose font, size and style</li>
+          </ol>
+        </li>
+        <li>Creating of barcode elements of type:</li>
+        <li>
+          <ol>
+            <li>39</li>
+            <li>128</li>
+            <li>EAN</li>
+            <li>Inter25</li>
+            <li>Postnet</li>
+            <li>Codabar</li>
+          </ol>
+        </li>
+        <li>Creating of image elements and setting custom width and height</li>
+        <li>Page editor in which you can :</li>
+        <li>
+          <ol>
+            <li>Set a background image of the page (printable or not)</li>
+            <li>Set the page size (A4, A3, 8x12 or custom)</li>
+            <li>Set the alignment, size, position and leading of each element</li>
+          </ol>
+        </li>
+        <li>Preview of the page where you can drag the elements to their positions</li>
+      </ul>
+    </td></tr>
+  <tr><td>Added ability to delete the first line (e.g. header titles)</td></tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr><th> 12-12-2007:(Version 1 beta2 )</th></tr>
+  <tr><td>Added TK labels for INFOPOST / PRESSPOST</td></tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr><th> 09-11-2007:(Version 1 beta )</th></tr>
+  <tr><td>Added Pop up menu to JTable for actions:
+      <ul>
+        <li>Delete column</li>
+        <li>Break long field</li>
+        <li>Make a column fixed size</li>
+        <li>Mark column as:
+          <ol>
+            <li>Zip Code</li>
+            <li>Address</li>
+            <li>City</li>
+            <li>Gender</li>
+            <li>FirstName</li>
+            <li>LastName</li>
+            <li>FullName</li>
+          </ol>
+        </li>
+        <li>Unmark Field</li>
+      </ul>
+    </td></tr>
+  <tr><td>Cut and stack multiple printing</td></tr>
+  <tr><td>Ability to change the background color of the application</td></tr>
+  <tr><td>The application remembers the last opened directory</td></tr>
+  <tr><td>Checks for database connections at start up and warns about errors</td></tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr><th>20-10-2007 :(Version 0.4 )</th></tr>
+  <tr><td>Add Templates</td></tr>
+  <tr><td>Changed Sample Area to JTable</td></tr>
+  <tr><td>Add Field</td></tr>
+  <tr><td>Multiply lines</td></tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr><th>27-09-2007 :(Version 0.3)</th></tr>
+  <tr><td>Find Zip Code</td></tr>
+  <tr><td>Undo action</td></tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr><th>18-09-2007 :(Version 0.2)</th></tr>
+  <tr><td>Revert to the starting file</td></tr>
+  <tr><td>Format zip code to '@XXX XX'</td></tr>
+  <tr><td>Combining zip code with city<</td></tr>
+  <tr><td>Generating a Zip Code labels PDF</td></tr>
+  <tr><td>Generating a Zip Code labels PDF from a PCADD file</td></tr>
+  <tr><td>Finding the vocative addressing</td></tr>
+  <tr><td>Finding the genitive addressing</td></tr>
+  <tr><td>Edit names without accent and import them in the DB or save them in a file for later editing</td></tr>
+  <tr><td>Check file for ctrl characters and replace them with spaces</td></tr>
+  <tr><td>Check a file for wrong zip codes</td></tr>
+  <tr><td>Check a file for missing data in the address fields</td></tr>
+  <tr><td>Spliting file from start to line, line to end, line to line or every number of lines</td></tr>
+  <tr><td>Generate duplex printing</td></tr>
+  <tr><td>Generate double production</td></tr>
+  <tr><td>Generate multiple printing</td></tr>
+</table>
+<table width="100%" cellspacing = "0" cellpadding="0">
+  <tr><th>02-08-2007 : (Version 0.1)</th></tr>
+  <tr><td>First version including:</td></tr>
+  <tr><td>NumOfTK sorting</td></tr>
+  <tr><td>Making a file fixed length</td></tr>
+  <tr><td>Breaking long fields</td></tr>
+  <tr><td>Generating the TK flag</td></tr>
+  <tr><td>Adding counter</td></tr>
+  <tr><td>Generating a not enveloped file</td></tr>
+  <tr><td>Generating a not enveloped Ids file</td></tr>
+  <tr><td>Generating a reprint file</td></tr>
+  <tr><td>Changing the delimeter of a file</td></tr>
+  <tr><td>Finding the gender</td></tr>
+  <tr><td>Generating the TK report</td></tr>
+  <tr><td>Deleting fields</td></tr>
+  <tr><td>Checking files for wrong fields number or length</td></tr>
+</table>
